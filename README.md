@@ -26,7 +26,3 @@ It is published **for demonstration purposes only**.
 **All rights reserved.** Unauthorized use, copying, or modification is strictly prohibited.
 
 © 2020 Nikolay Grachev ([github.com/granik](https://github.com/granik))
-
-# TODO:
-- depersonalize db dump
-- reinit git repo AND publish

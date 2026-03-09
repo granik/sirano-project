@@ -1,7 +1,7 @@
-# Portfolio projecte: SIRANO Educational website
-This is a freelance project by [Nikolay Grachev](https://github.com/granik), developed in 2018–2019.  
-It is a educational website containing articles and online-lessons for medical employees.
-
+# SIRANO Educational website
+## PHP + Symfony + Doctrine + HTML/CSS + MySQL
+A educational online-platform containing articles and online-lessons for medical employees.
+This is a code of the one of my freelance projects. I'm the author of the backend code & architecture.
 
 ---
 **Steps to launch the project locally:**
@@ -9,7 +9,7 @@ It is a educational website containing articles and online-lessons for medical e
 Execute in console `./start-local.sh`
 
 App will be available at ``http://localhost:8080/``   
-PhpMyAdmin: ``http://localhost:8001/``
+PhpMyAdmin at: ``http://localhost:8001/``
 
 
 ---

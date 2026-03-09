@@ -1,4 +1,8 @@
 .env
 
 */**/*.sql
+!docker/mysql/symfony.sql
+
+.DS_Store
+*/**/.DS_Store
 

@@ -84,10 +84,10 @@
 
                         <div class="additional-menu">
                             <div class="additional-menu__wrapper">
-                                {{ render(controller('App\\Frontend\\Controller\\TemplateBlockController::direction')) }}
+                                {{ render(controller('App\\Modules\\Platform\\Presentation\\PublicHttp\\Controller\\TemplateBlockController::direction')) }}
                                 {% if app.user and app.user.user.customerId %}
                                     <!-- profile-->
-                                    {{ render(controller('App\\Frontend\\Controller\\TemplateBlockController::profile')) }}
+                                    {{ render(controller('App\\Modules\\Platform\\Presentation\\PublicHttp\\Controller\\TemplateBlockController::profile')) }}
                                     <!-- /profile -->
                                 {% else %}
                                     <!-- login-->
@@ -204,7 +204,7 @@
                                 </span>
                             </div>
                         </div>
-                        {{ render(controller('App\\Frontend\\Controller\\CounterController::index')) }}
+                        {{ render(controller('App\\Modules\\Analytics\\Presentation\\PublicHttp\\Controller\\CounterController::index')) }}
                         <div class="col-12 col-md-4">
                             <div class="d-flex flex-row justify-content-between justify-content-lg-end">
                                 <div class="d-flex order-1 order-md-2 justify-content-start justify-content-md-end">
@@ -223,7 +223,7 @@
         {% include 'frontend/partials/sirano-welcome.html.twig' %}
 
         {% block modals %}
-            {{ render(controller('App\\Frontend\\Controller\\DirectionController::list')) }}
+            {{ render(controller('App\\Modules\\Direction\\Presentation\\PublicHttp\\Controller\\DirectionController::list')) }}
 
             {% if not app.user %}
                 {% include 'frontend/partials/modals/login.html.twig' %}

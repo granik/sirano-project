@@ -2,7 +2,7 @@
 
 namespace App\Tests\Domain\Entity\Conference;
 
-use App\Domain\Entity\Conference\Conference;
+use App\Modules\Conference\Domain\Entity\Conference;
 use PHPUnit\Framework\TestCase;
 
 class ConferenceTest extends TestCase

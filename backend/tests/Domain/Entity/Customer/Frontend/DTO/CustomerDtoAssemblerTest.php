@@ -2,7 +2,7 @@
 
 namespace App\Domain\Entity\Customer\Frontend\DTO;
 
-use App\Domain\Entity\Customer\Customer;
+use App\Modules\Customer\Domain\Entity\Customer;
 use PHPUnit\Framework\TestCase;
 
 class CustomerDtoAssemblerTest extends TestCase

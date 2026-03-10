@@ -1,24 +1,24 @@
 webinars:
     path: /webinar
-    controller: App\Frontend\Controller\WebinarController::list
+    controller: App\Modules\Webinar\Presentation\PublicHttp\Controller\WebinarController::list
 
 webinars_archive:
     path: /webinar/archive
-    controller: App\Frontend\Controller\WebinarController::archive
+    controller: App\Modules\Webinar\Presentation\PublicHttp\Controller\WebinarController::archive
 
 webinar:
     path: /webinar/{id}
-    controller: App\Frontend\Controller\WebinarController::show
+    controller: App\Modules\Webinar\Presentation\PublicHttp\Controller\WebinarController::show
     requirements:
         id: '\d+'
 
 webinar_confirm:
     path: /api/webinar/confirm
-    controller: App\Frontend\Controller\WebinarController::confirm
+    controller: App\Modules\Webinar\Presentation\PublicHttp\Controller\WebinarController::confirm
 
 webinar_get_times:
     path: /api/webinar/get_times
-    controller: App\Frontend\Controller\WebinarController::getTimes
+    controller: App\Modules\Webinar\Presentation\PublicHttp\Controller\WebinarController::getTimes
 
 webinar_subscribe:
     path: /api/webinar/subscribe
@@ -26,133 +26,133 @@ webinar_subscribe:
 
 webinar_unsubscribe:
     path: /api/webinar/unsubscribe
-    controller: App\Frontend\Controller\WebinarController::unsubscribe
+    controller: App\Modules\Webinar\Presentation\PublicHttp\Controller\WebinarController::unsubscribe
 
 webinar_message:
     path: /api/webinar/send_message
-    controller: App\Frontend\Controller\WebinarController::sendMessage
+    controller: App\Modules\Webinar\Presentation\PublicHttp\Controller\WebinarController::sendMessage
 
 direction_select:
     path: /api/direction/select
-    controller: App\Frontend\Controller\DirectionController::select
+    controller: App\Modules\Direction\Presentation\PublicHttp\Controller\DirectionController::select
 
 direction_drop_selected:
     path: /api/direction/drop
-    controller: App\Frontend\Controller\DirectionController::drop
+    controller: App\Modules\Direction\Presentation\PublicHttp\Controller\DirectionController::drop
 
 direction_get_categories:
     path: /api/direction/get_categories
-    controller: App\Frontend\Controller\DirectionController::getCategories
+    controller: App\Modules\Direction\Presentation\PublicHttp\Controller\DirectionController::getCategories
 
 conferences:
     path: /conference
-    controller: App\Frontend\Controller\ConferenceController::list
+    controller: App\Modules\Conference\Presentation\PublicHttp\Controller\ConferenceController::list
 
 conferences_archive:
     path: /conference/archive
-    controller: App\Frontend\Controller\ConferenceController::archive
+    controller: App\Modules\Conference\Presentation\PublicHttp\Controller\ConferenceController::archive
 
 conference:
     path: /conference/{id}
-    controller: App\Frontend\Controller\ConferenceController::show
+    controller: App\Modules\Conference\Presentation\PublicHttp\Controller\ConferenceController::show
     requirements:
         id: '\d+'
 
 conference_subscribe:
     path: /api/conference/subscribe
-    controller: App\Frontend\Controller\ConferenceController::subscribe
+    controller: App\Modules\Conference\Presentation\PublicHttp\Controller\ConferenceController::subscribe
 
 conference_unsubscribe:
     path: /api/conference/unsubscribe
-    controller: App\Frontend\Controller\ConferenceController::unsubscribe
+    controller: App\Modules\Conference\Presentation\PublicHttp\Controller\ConferenceController::unsubscribe
 
 modules:
     path: /module
-    controller: App\Frontend\Controller\ModuleController::index
+    controller: App\Modules\LearningModule\Presentation\PublicHttp\Controller\ModuleController::index
 
 module:
     path: /module/{id}
-    controller: App\Frontend\Controller\ModuleController::show
+    controller: App\Modules\LearningModule\Presentation\PublicHttp\Controller\ModuleController::show
     requirements:
         id: '\d+'
 
 module_test:
     path: /module/{id}/test
-    controller: App\Frontend\Controller\ModuleController::test
+    controller: App\Modules\LearningModule\Presentation\PublicHttp\Controller\ModuleController::test
     requirements:
         id: '\d+'
 
 module_check_test:
     path: /api/module/check-test
-    controller: App\Frontend\Controller\ModuleController::checkTest
+    controller: App\Modules\LearningModule\Presentation\PublicHttp\Controller\ModuleController::checkTest
 
 articles:
     path: /article
-    controller: App\Frontend\Controller\ArticleController::index
+    controller: App\Modules\Article\Presentation\PublicHttp\Controller\ArticleController::index
 
 clinical_analyzes:
     path: /clinical-analysis
-    controller: App\Frontend\Controller\ClinicalAnalysisController::index
+    controller: App\Modules\ClinicalAnalysis\Presentation\PublicHttp\Controller\ClinicalAnalysisController::index
 
 clinical_analysis:
     path: /clinical-analysis/{id}
-    controller: App\Frontend\Controller\ClinicalAnalysisController::show
+    controller: App\Modules\ClinicalAnalysis\Presentation\PublicHttp\Controller\ClinicalAnalysisController::show
     requirements:
         id: '\d+'
 
 clinical_analysis_message:
     path: /api/clinical-analysis/send_message
-    controller: App\Frontend\Controller\ClinicalAnalysisController::sendMessage
+    controller: App\Modules\ClinicalAnalysis\Presentation\PublicHttp\Controller\ClinicalAnalysisController::sendMessage
 
 clinical_analysis_company_message:
     path: /api/clinical-analysis/send_company_message
-    controller: App\Frontend\Controller\ClinicalAnalysisController::sendCompanyMessage
+    controller: App\Modules\ClinicalAnalysis\Presentation\PublicHttp\Controller\ClinicalAnalysisController::sendCompanyMessage
 
 news:
     path: /news
-    controller: App\Frontend\Controller\NewsController::index
+    controller: App\Modules\News\Presentation\PublicHttp\Controller\NewsController::index
 
 news_post:
     path: /news/{id}
-    controller: App\Frontend\Controller\NewsController::show
+    controller: App\Modules\News\Presentation\PublicHttp\Controller\NewsController::show
     requirements:
         id: '\d+'
 
 chukaeva:
     path: /chukaeva
-    controller: App\Frontend\Controller\DefaultController::chukaeva
+    controller: App\Modules\Platform\Presentation\PublicHttp\Controller\DefaultController::chukaeva
 
 presidium:
     path: /presidium
-    controller: App\Frontend\Controller\PresidiumController::index
+    controller: App\Modules\Presidium\Presentation\PublicHttp\Controller\PresidiumController::index
 
 members:
     path: /members
-    controller: App\Frontend\Controller\MembersController::index
+    controller: App\Modules\Shared\Presentation\PublicHttp\Controller\MembersController::index
 
 documents:
     path: /document
-    controller: App\Frontend\Controller\DocumentController::index
+    controller: App\Modules\Document\Presentation\PublicHttp\Controller\DocumentController::index
 
 check_user_email:
     path: /check_user_email
-    controller: App\Frontend\Controller\UserController::checkUserEmail
+    controller: App\Modules\Identity\Presentation\PublicHttp\Controller\UserController::checkUserEmail
 
 register:
     path: /register
-    controller: App\Frontend\Controller\UserController::register
+    controller: App\Modules\Identity\Presentation\PublicHttp\Controller\UserController::register
 
 confirm:
     path: /confirm/{code}
-    controller: App\Frontend\Controller\UserController::confirm
+    controller: App\Modules\Identity\Presentation\PublicHttp\Controller\UserController::confirm
 
 recovery:
     path: /recovery
-    controller: App\Frontend\Controller\UserController::recovery
+    controller: App\Modules\Identity\Presentation\PublicHttp\Controller\UserController::recovery
 
 login:
     path: /login
-    controller: App\Frontend\Controller\SecurityController::login
+    controller: App\Modules\Identity\Presentation\PublicHttp\Controller\SecurityController::login
 
 logout:
     path: /logout
@@ -160,397 +160,397 @@ logout:
 
 profile_dashboard:
     path: /profile/dashboard
-    controller: App\Frontend\Controller\ProfileController::dashboard
+    controller: App\Modules\Shared\Presentation\PublicHttp\Controller\ProfileController::dashboard
 
 profile_webinars:
     path: /profile/webinar
-    controller: App\Frontend\Controller\WebinarController::profile
+    controller: App\Modules\Webinar\Presentation\PublicHttp\Controller\WebinarController::profile
 
 profile_conferences:
     path: /profile/conference
-    controller: App\Frontend\Controller\ConferenceController::profile
+    controller: App\Modules\Conference\Presentation\PublicHttp\Controller\ConferenceController::profile
 
 profile_modules:
     path: /profile/module
-    controller: App\Frontend\Controller\ModuleController::profile
+    controller: App\Modules\LearningModule\Presentation\PublicHttp\Controller\ModuleController::profile
 
 profile:
     path: /profile
-    controller: App\Frontend\Controller\ProfileController::profile
+    controller: App\Modules\Shared\Presentation\PublicHttp\Controller\ProfileController::profile
 
 password_update:
     path: /profile/password_update
-    controller: App\Frontend\Controller\ProfileController::passwordUpdate
+    controller: App\Modules\Shared\Presentation\PublicHttp\Controller\ProfileController::passwordUpdate
 
 index:
     path: /
-    controller: App\Frontend\Controller\DefaultController::index
+    controller: App\Modules\Platform\Presentation\PublicHttp\Controller\DefaultController::index
 
 cms:
     path: /cms
-    controller: App\Backend\Controller\DefaultController::index
+    controller: App\Modules\Platform\Presentation\AdminHttp\Controller\DefaultController::index
 
 cms_customers:
     path: /cms/customer
-    controller: App\Backend\Controller\CustomerController::index
+    controller: App\Modules\Customer\Presentation\AdminHttp\Controller\CustomerController::index
 
 cms_customer_edit:
     path: /cms/customer/{id}
-    controller: App\Backend\Controller\CustomerController::edit
+    controller: App\Modules\Customer\Presentation\AdminHttp\Controller\CustomerController::edit
     requirements:
         id: '\d+'
 
 cms_customer_password_update:
     path: /cms/customer/{id}/password_update
-    controller: App\Backend\Controller\CustomerController::passwordUpdate
+    controller: App\Modules\Customer\Presentation\AdminHttp\Controller\CustomerController::passwordUpdate
     requirements:
         id: '\d+'
 
 cms_customer_delete:
     path: /cms/customer/delete
-    controller: App\Backend\Controller\CustomerController::delete
+    controller: App\Modules\Customer\Presentation\AdminHttp\Controller\CustomerController::delete
 
 cms_customer_download:
     path: /cms/customer/download
-    controller: App\Backend\Controller\CustomerController::download
+    controller: App\Modules\Customer\Presentation\AdminHttp\Controller\CustomerController::download
 
 cms_customer_upload:
     path: /cms/customer/upload
-    controller: App\Backend\Controller\CustomerController::upload
+    controller: App\Modules\Customer\Presentation\AdminHttp\Controller\CustomerController::upload
 
 cms_directions:
     path: /cms/direction
-    controller: App\Backend\Controller\DirectionController::index
+    controller: App\Modules\Direction\Presentation\AdminHttp\Controller\DirectionController::index
 
 cms_direction_edit:
     path: /cms/direction/{id}
-    controller: App\Backend\Controller\DirectionController::edit
+    controller: App\Modules\Direction\Presentation\AdminHttp\Controller\DirectionController::edit
     requirements:
         id: '\d+'
 
 cms_direction_create:
     path: /cms/direction/create
-    controller: App\Backend\Controller\DirectionController::create
+    controller: App\Modules\Direction\Presentation\AdminHttp\Controller\DirectionController::create
 
 cms_direction_delete:
     path: /cms/direction/delete
-    controller: App\Backend\Controller\DirectionController::delete
+    controller: App\Modules\Direction\Presentation\AdminHttp\Controller\DirectionController::delete
 
 cms_webinars:
     path: /cms/webinar
-    controller: App\Backend\Controller\WebinarController::index
+    controller: App\Modules\Webinar\Presentation\AdminHttp\Controller\WebinarController::index
 
 cms_webinar_edit:
     path: /cms/webinar/{id}
-    controller: App\Backend\Controller\WebinarController::edit
+    controller: App\Modules\Webinar\Presentation\AdminHttp\Controller\WebinarController::edit
     requirements:
         id: '\d+'
 
 cms_webinar_create:
     path: /cms/webinar/create
-    controller: App\Backend\Controller\WebinarController::create
+    controller: App\Modules\Webinar\Presentation\AdminHttp\Controller\WebinarController::create
 
 cms_webinar_delete:
     path: /cms/webinar/delete
-    controller: App\Backend\Controller\WebinarController::delete
+    controller: App\Modules\Webinar\Presentation\AdminHttp\Controller\WebinarController::delete
 
 cms_webinar_report:
     path: /cms/webinar/{id}/report
-    controller: App\Backend\Controller\WebinarController::report
+    controller: App\Modules\Webinar\Presentation\AdminHttp\Controller\WebinarController::report
     requirements:
         id: '\d+'
 
 cms_webinar_subscribers:
     path: /cms/webinar/{id}/subscribers
-    controller: App\Backend\Controller\WebinarController::saveSubscibers
+    controller: App\Modules\Webinar\Presentation\AdminHttp\Controller\WebinarController::saveSubscibers
     requirements:
         id: '\d+'
 
 cms_cities:
     path: /cms/city
-    controller: App\Backend\Controller\CityController::index
+    controller: App\Modules\Location\Presentation\AdminHttp\Controller\CityController::index
 
 cms_city_edit:
     path: /cms/city/{id}
-    controller: App\Backend\Controller\CityController::edit
+    controller: App\Modules\Location\Presentation\AdminHttp\Controller\CityController::edit
     requirements:
         id: '\d+'
 
 cms_city_create:
     path: /cms/city/create
-    controller: App\Backend\Controller\CityController::create
+    controller: App\Modules\Location\Presentation\AdminHttp\Controller\CityController::create
 
 cms_city_delete:
     path: /cms/city/delete
-    controller: App\Backend\Controller\CityController::delete
+    controller: App\Modules\Location\Presentation\AdminHttp\Controller\CityController::delete
 
 cms_conferences:
     path: /cms/conference
-    controller: App\Backend\Controller\ConferenceController::index
+    controller: App\Modules\Conference\Presentation\AdminHttp\Controller\ConferenceController::index
 
 cms_conference_edit:
     path: /cms/conference/{id}
-    controller: App\Backend\Controller\ConferenceController::edit
+    controller: App\Modules\Conference\Presentation\AdminHttp\Controller\ConferenceController::edit
     requirements:
         id: '\d+'
 
 cms_conference_update_subscribers:
     path: /cms/conference/{id}/update_subscribers
-    controller: App\Backend\Controller\ConferenceController::updateSubscribers
+    controller: App\Modules\Conference\Presentation\AdminHttp\Controller\ConferenceController::updateSubscribers
     requirements:
         id: '\d+'
 
 cms_conference_delete:
     path: /cms/conference/delete
-    controller: App\Backend\Controller\ConferenceController::delete
+    controller: App\Modules\Conference\Presentation\AdminHttp\Controller\ConferenceController::delete
 
 cms_conference_create:
     path: /cms/conference/create
-    controller: App\Backend\Controller\ConferenceController::create
+    controller: App\Modules\Conference\Presentation\AdminHttp\Controller\ConferenceController::create
 
 cms_conference_subscribers:
     path: /cms/conference/{id}/subscribers
-    controller: App\Backend\Controller\ConferenceController::saveSubscibers
+    controller: App\Modules\Conference\Presentation\AdminHttp\Controller\ConferenceController::saveSubscibers
     requirements:
         id: '\d+'
 
 cms_conference_upload_subscribers:
     path: /cms/conference/{id}/load_subscribers
-    controller: App\Backend\Controller\ConferenceController::loadSubscibers
+    controller: App\Modules\Conference\Presentation\AdminHttp\Controller\ConferenceController::loadSubscibers
     requirements:
         id: '\d+'
 
 cms_modules:
     path: /cms/module
-    controller: App\Backend\Controller\ModuleController::index
+    controller: App\Modules\LearningModule\Presentation\AdminHttp\Controller\ModuleController::index
 
 cms_module_edit:
     path: /cms/module/{id}
-    controller: App\Backend\Controller\ModuleController::edit
+    controller: App\Modules\LearningModule\Presentation\AdminHttp\Controller\ModuleController::edit
     requirements:
         id: '\d+'
 
 cms_module_create:
     path: /cms/module/create
-    controller: App\Backend\Controller\ModuleController::create
+    controller: App\Modules\LearningModule\Presentation\AdminHttp\Controller\ModuleController::create
 
 cms_module_delete:
     path: /cms/module/delete
-    controller: App\Backend\Controller\ModuleController::delete
+    controller: App\Modules\LearningModule\Presentation\AdminHttp\Controller\ModuleController::delete
 
 cms_module_test:
     path: /cms/module/{id}/test
-    controller: App\Backend\Controller\ModuleTestController::edit
+    controller: App\Modules\LearningModule\Presentation\AdminHttp\Controller\ModuleTestController::edit
     requirements:
         id: '\d+'
 
 cms_module_get_category:
     path: /cms/module/get_category
-    controller: App\Backend\Controller\ModuleController::getCategory
+    controller: App\Modules\LearningModule\Presentation\AdminHttp\Controller\ModuleController::getCategory
 
 cms_articles:
     path: /cms/article
-    controller: App\Backend\Controller\ArticleController::index
+    controller: App\Modules\Article\Presentation\AdminHttp\Controller\ArticleController::index
 
 cms_article_create:
     path: /cms/article/create
-    controller: App\Backend\Controller\ArticleController::create
+    controller: App\Modules\Article\Presentation\AdminHttp\Controller\ArticleController::create
 
 cms_article_edit:
     path: /cms/article/{id}
-    controller: App\Backend\Controller\ArticleController::edit
+    controller: App\Modules\Article\Presentation\AdminHttp\Controller\ArticleController::edit
     requirements:
         id: '\d+'
 
 cms_article_delete:
     path: /cms/article/delete
-    controller: App\Backend\Controller\ArticleController::delete
+    controller: App\Modules\Article\Presentation\AdminHttp\Controller\ArticleController::delete
 
 cms_article_get_category:
     path: /cms/article/get_category
-    controller: App\Backend\Controller\ArticleController::getCategory
+    controller: App\Modules\Article\Presentation\AdminHttp\Controller\ArticleController::getCategory
 
 cms_clinical_analyzes:
     path: /cms/clinical-analysis
-    controller: App\Backend\Controller\ClinicalAnalysisController::index
+    controller: App\Modules\ClinicalAnalysis\Presentation\AdminHttp\Controller\ClinicalAnalysisController::index
 
 cms_clinical_analysis_create:
     path: /cms/clinical-analysis/create
-    controller: App\Backend\Controller\ClinicalAnalysisController::create
+    controller: App\Modules\ClinicalAnalysis\Presentation\AdminHttp\Controller\ClinicalAnalysisController::create
 
 cms_clinical_analysis_delete:
     path: /cms/clinical-analysis/delete
-    controller: App\Backend\Controller\ClinicalAnalysisController::delete
+    controller: App\Modules\ClinicalAnalysis\Presentation\AdminHttp\Controller\ClinicalAnalysisController::delete
 
 cms_clinical_analysis_edit:
     path: /cms/clinical-analysis/{id}
-    controller: App\Backend\Controller\ClinicalAnalysisController::edit
+    controller: App\Modules\ClinicalAnalysis\Presentation\AdminHttp\Controller\ClinicalAnalysisController::edit
     requirements:
         id: '\d+'
 
 cms_clinical_analysis_get_category:
     path: /cms/clinical-analysis/get_category
-    controller: App\Backend\Controller\ClinicalAnalysisController::getCategory
+    controller: App\Modules\ClinicalAnalysis\Presentation\AdminHttp\Controller\ClinicalAnalysisController::getCategory
 
 cms_news:
     path: /cms/news
-    controller: App\Backend\Controller\NewsController::index
+    controller: App\Modules\News\Presentation\AdminHttp\Controller\NewsController::index
 
 cms_news_create:
     path: /cms/news/create
-    controller: App\Backend\Controller\NewsController::create
+    controller: App\Modules\News\Presentation\AdminHttp\Controller\NewsController::create
 
 cms_news_delete:
     path: /cms/news/delete
-    controller: App\Backend\Controller\NewsController::delete
+    controller: App\Modules\News\Presentation\AdminHttp\Controller\NewsController::delete
 
 cms_news_edit:
     path: /cms/news/{id}
-    controller: App\Backend\Controller\NewsController::edit
+    controller: App\Modules\News\Presentation\AdminHttp\Controller\NewsController::edit
     requirements:
         id: '\d+'
 
 cms_news_file_upload:
     path: /cms/news/file_upload
-    controller: App\Backend\Controller\NewsController::fileUpload
+    controller: App\Modules\News\Presentation\AdminHttp\Controller\NewsController::fileUpload
 
 cms_banners:
     path: /cms/banner
-    controller: App\Backend\Controller\BannerController::index
+    controller: App\Modules\Banner\Presentation\AdminHttp\Controller\BannerController::index
 
 cms_banner_create:
     path: /cms/banner/create
-    controller: App\Backend\Controller\BannerController::create
+    controller: App\Modules\Banner\Presentation\AdminHttp\Controller\BannerController::create
 
 cms_banner_edit:
     path: /cms/banner/{id}
-    controller: App\Backend\Controller\BannerController::edit
+    controller: App\Modules\Banner\Presentation\AdminHttp\Controller\BannerController::edit
     requirements:
         id: '\d+'
 
 cms_banner_delete:
     path: /cms/banner/delete
-    controller: App\Backend\Controller\BannerController::delete
+    controller: App\Modules\Banner\Presentation\AdminHttp\Controller\BannerController::delete
 
 cms_advert_banners:
     path: /cms/advert-banner
-    controller: App\Backend\Controller\AdvertBannerController::index
+    controller: App\Modules\AdvertBanner\Presentation\AdminHttp\Controller\AdvertBannerController::index
 
 cms_advert_banner_create:
     path: /cms/advert-banner/create
-    controller: App\Backend\Controller\AdvertBannerController::create
+    controller: App\Modules\AdvertBanner\Presentation\AdminHttp\Controller\AdvertBannerController::create
 
 cms_advert_banner_edit:
     path: /cms/advert-banner/{id}
-    controller: App\Backend\Controller\AdvertBannerController::edit
+    controller: App\Modules\AdvertBanner\Presentation\AdminHttp\Controller\AdvertBannerController::edit
     requirements:
         id: '\d+'
 
 cms_advert_banner_delete:
     path: /cms/advert-banner/delete
-    controller: App\Backend\Controller\AdvertBannerController::delete
+    controller: App\Modules\AdvertBanner\Presentation\AdminHttp\Controller\AdvertBannerController::delete
 
 cms_presidiums:
     path: /cms/presidium
-    controller: App\Backend\Controller\PresidiumController::index
+    controller: App\Modules\Presidium\Presentation\AdminHttp\Controller\PresidiumController::index
 
 cms_presidium_create:
     path: /cms/presidium/create
-    controller: App\Backend\Controller\PresidiumController::create
+    controller: App\Modules\Presidium\Presentation\AdminHttp\Controller\PresidiumController::create
 
 cms_presidium_delete:
     path: /cms/presidium/delete
-    controller: App\Backend\Controller\PresidiumController::delete
+    controller: App\Modules\Presidium\Presentation\AdminHttp\Controller\PresidiumController::delete
 
 cms_presidium_edit:
     path: /cms/presidium/{id}
-    controller: App\Backend\Controller\PresidiumController::edit
+    controller: App\Modules\Presidium\Presentation\AdminHttp\Controller\PresidiumController::edit
     requirements:
         id: '\d+'
 
 cms_documents:
     path: /cms/document
-    controller: App\Backend\Controller\DocumentController::index
+    controller: App\Modules\Document\Presentation\AdminHttp\Controller\DocumentController::index
 
 cms_document_create:
     path: /cms/document/create
-    controller: App\Backend\Controller\DocumentController::create
+    controller: App\Modules\Document\Presentation\AdminHttp\Controller\DocumentController::create
 
 cms_document_delete:
     path: /cms/document/delete
-    controller: App\Backend\Controller\DocumentController::delete
+    controller: App\Modules\Document\Presentation\AdminHttp\Controller\DocumentController::delete
 
 cms_document_edit:
     path: /cms/document/{id}
-    controller: App\Backend\Controller\DocumentController::edit
+    controller: App\Modules\Document\Presentation\AdminHttp\Controller\DocumentController::edit
     requirements:
         id: '\d+'
 
 cms_conference_series:
     path: /cms/conference_series
-    controller: App\Backend\Controller\ConferenceSeriesController::index
+    controller: App\Modules\Conference\Presentation\AdminHttp\Controller\ConferenceSeriesController::index
 
 cms_conference_series_edit:
     path: /cms/conference_series/{id}
-    controller: App\Backend\Controller\ConferenceSeriesController::edit
+    controller: App\Modules\Conference\Presentation\AdminHttp\Controller\ConferenceSeriesController::edit
     requirements:
         id: '\d+'
 
 cms_conference_series_delete:
     path: /cms/conference_series/delete
-    controller: App\Backend\Controller\ConferenceSeriesController::delete
+    controller: App\Modules\Conference\Presentation\AdminHttp\Controller\ConferenceSeriesController::delete
 
 cms_conference_series_create:
     path: /cms/conference_series/create
-    controller: App\Backend\Controller\ConferenceSeriesController::create
+    controller: App\Modules\Conference\Presentation\AdminHttp\Controller\ConferenceSeriesController::create
 
 cms_settings_main_page:
     path: /cms/settings/main_page
-    controller: App\Backend\Controller\SettingsController::mainPage
+    controller: App\Modules\Platform\Presentation\AdminHttp\Controller\SettingsController::mainPage
 
 cms_settings_email_schedule:
     path: /cms/settings/email_schedule
-    controller: App\Backend\Controller\SettingsController::emailSchedule
+    controller: App\Modules\Platform\Presentation\AdminHttp\Controller\SettingsController::emailSchedule
 
 cms_main_specialties:
     path: /cms/main_specialty
-    controller: App\Backend\Controller\MainSpecialtyController::index
+    controller: App\Modules\Specialty\Presentation\AdminHttp\Controller\MainSpecialtyController::index
 
 cms_main_specialty_edit:
     path: /cms/main_specialty/{id}
-    controller: App\Backend\Controller\MainSpecialtyController::edit
+    controller: App\Modules\Specialty\Presentation\AdminHttp\Controller\MainSpecialtyController::edit
     requirements:
         id: '\d+'
 
 cms_main_specialty_create:
     path: /cms/main_specialty/create
-    controller: App\Backend\Controller\MainSpecialtyController::create
+    controller: App\Modules\Specialty\Presentation\AdminHttp\Controller\MainSpecialtyController::create
 
 cms_main_specialty_delete:
     path: /cms/main_specialty/delete
-    controller: App\Backend\Controller\MainSpecialtyController::delete
+    controller: App\Modules\Specialty\Presentation\AdminHttp\Controller\MainSpecialtyController::delete
 
 cms_additional_specialties:
     path: /cms/additional_specialty
-    controller: App\Backend\Controller\AdditionalSpecialtyController::index
+    controller: App\Modules\Specialty\Presentation\AdminHttp\Controller\AdditionalSpecialtyController::index
 
 cms_additional_specialty_edit:
     path: /cms/additional_specialty/{id}
-    controller: App\Backend\Controller\AdditionalSpecialtyController::edit
+    controller: App\Modules\Specialty\Presentation\AdminHttp\Controller\AdditionalSpecialtyController::edit
     requirements:
         id: '\d+'
 
 cms_additional_specialty_create:
     path: /cms/additional_specialty/create
-    controller: App\Backend\Controller\AdditionalSpecialtyController::create
+    controller: App\Modules\Specialty\Presentation\AdminHttp\Controller\AdditionalSpecialtyController::create
 
 cms_additional_specialty_delete:
     path: /cms/additional_specialty/delete
-    controller: App\Backend\Controller\AdditionalSpecialtyController::delete
+    controller: App\Modules\Specialty\Presentation\AdminHttp\Controller\AdditionalSpecialtyController::delete
 
 cms_login:
     path: /cms/login
-    controller: App\Backend\Controller\SecurityController::login
+    controller: App\Modules\Identity\Presentation\AdminHttp\Controller\SecurityController::login
 
 cms_logout:
     path: /cms/logout

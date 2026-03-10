@@ -3,12 +3,12 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                           https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="App\Domain\Entity\ClinicalAnalysis\ClinicalAnalysisSlide" table="clinical_analisis_slides">
+    <entity name="App\Modules\ClinicalAnalysis\Domain\Entity\ClinicalAnalysisSlide" table="clinical_analisis_slides">
         <id name="id" type="integer">
             <generator strategy="AUTO" />
         </id>
 
-        <many-to-one field="clinicalAnalysis" target-entity="App\Domain\Entity\ClinicalAnalysis\ClinicalAnalysis">
+        <many-to-one field="clinicalAnalysis" target-entity="App\Modules\ClinicalAnalysis\Domain\Entity\ClinicalAnalysis">
             <join-column name="clinical_analisis_id" referenced-column-name="id" on-delete="CASCADE" />
         </many-to-one>
         <field name="name" type="string" />

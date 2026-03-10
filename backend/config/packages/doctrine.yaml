@@ -25,95 +25,95 @@ doctrine:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/domain'
-                prefix: 'App\Domain\Entity'
+                prefix: 'App\Modules\Location\Domain\Entity'
                 alias: Domain
             Customer:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/customer'
-                prefix: 'App\Domain\Entity\Customer'
+                prefix: 'App\Modules\Customer\Domain\Entity'
                 alias: Customer
             Conference:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/conference'
-                prefix: 'App\Domain\Entity\Conference'
+                prefix: 'App\Modules\Conference\Domain\Entity'
                 alias: Conference
             Module:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/module'
-                prefix: 'App\Domain\Entity\Module'
+                prefix: 'App\Modules\LearningModule\Domain\Entity'
                 alias: Module
             Article:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/article'
-                prefix: 'App\Domain\Entity\Article'
+                prefix: 'App\Modules\Article\Domain\Entity'
                 alias: Article
             ClinicalAnalysis:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/clinical_analysis'
-                prefix: 'App\Domain\Entity\ClinicalAnalysis'
+                prefix: 'App\Modules\ClinicalAnalysis\Domain\Entity'
                 alias: ClinicalAnalysis
             News:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/news'
-                prefix: 'App\Domain\Entity\News'
+                prefix: 'App\Modules\News\Domain\Entity'
                 alias: News
             Banner:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/banner'
-                prefix: 'App\Domain\Entity\Banner'
+                prefix: 'App\Modules\Banner\Domain\Entity'
                 alias: Banner
             AdvertBanner:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/advert_banner'
-                prefix: 'App\Domain\Entity\AdvertBanner'
+                prefix: 'App\Modules\AdvertBanner\Domain\Entity'
                 alias: AdvertBanner
             PresidiumMember:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/presidium'
-                prefix: 'App\Domain\Entity\PresidiumMember'
+                prefix: 'App\Modules\Presidium\Domain\Entity'
                 alias: PresidiumMember
             Document:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/document'
-                prefix: 'App\Domain\Entity\Document'
+                prefix: 'App\Modules\Document\Domain\Entity'
                 alias: Document
             Direction:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/direction'
-                prefix: 'App\Domain\Entity\Direction'
+                prefix: 'App\Modules\Direction\Domain\Entity'
                 alias: Direction
             User:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/user'
-                prefix: 'App\Domain\Interactor\User'
+                prefix: 'App\Modules\Identity\Repository'
                 alias: User
             Webinar:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/webinar'
-                prefix: 'App\Webinar'
+                prefix: 'App\Modules\Webinar\Domain\Entity'
                 alias: Webinar
             Entity:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/entity'
-                prefix: 'App\Entity'
+                prefix: 'App\Modules\Platform\Domain\Entity'
                 alias: Entity
             MainSpecialty:
                 is_bundle: false
                 type: xml
                 dir: '%kernel.project_dir%/config/doctrine/specialty'
-                prefix: 'App\Domain\Entity\Specialty'
+                prefix: 'App\Modules\Specialty\Domain\Entity'
                 alias: MainSpecialty

@@ -4,7 +4,7 @@
 namespace App\Tests\Builders;
 
 
-use App\Domain\Entity\Customer\Customer;
+use App\Modules\Customer\Domain\Entity\Customer;
 
 final class CustomerBuilder
 {

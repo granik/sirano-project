@@ -1,11 +1,11 @@
 <nav class="mobile-menu">
     <ul class="mobile-menu-categories list-unstyled">
-        {{ render(controller('App\\Frontend\\Controller\\DirectionController::mobileList')) }}
+        {{ render(controller('App\\Modules\\Direction\\Presentation\\PublicHttp\\Controller\\DirectionController::mobileList')) }}
         {% if app.user and app.user.user.customerId %}
             <li class="menu-element arrow menu-profile">
                 <div class="container">
                     <a href="#" class="menu-element__link">
-                        {{ render(controller('App\\Frontend\\Controller\\TemplateBlockController::mobileProfile')) }}
+                        {{ render(controller('App\\Modules\\Platform\\Presentation\\PublicHttp\\Controller\\TemplateBlockController::mobileProfile')) }}
                     </a>
                     <div class="submenu">
                         <a href="{{ path('profile_dashboard') }}">Личный кабинет</a>

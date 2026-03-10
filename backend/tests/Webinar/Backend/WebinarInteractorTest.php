@@ -2,15 +2,15 @@
 
 namespace App\Webinar\Backend;
 
-use App\Domain\Backend\Interactor\DirectionInteractor;
-use App\Domain\Backend\Interactor\FileUploader;
-use App\Domain\Backend\Interactor\TableWriterInterface;
-use App\Domain\Entity\Direction\Backend\CategoryRepositoryInterface;
-use App\Domain\Entity\Direction\DirectionRepositoryInterface;
+use App\Modules\Direction\Application\UseCase\Admin\DirectionInteractor;
+use App\Infrastructure\Files\FileUploader;
+use App\Infrastructure\Files\TableWriterInterface;
+use App\Modules\Direction\Domain\Repository\Admin\CategoryRepositoryInterface;
+use App\Modules\Direction\Domain\Repository\DirectionRepositoryInterface;
 use App\Tests\Builders\CustomerBuilder;
-use App\Webinar\Webinar;
-use App\Webinar\WebinarReportRepositoryInterface;
-use App\Webinar\WebinarSubscriber;
+use App\Modules\Webinar\Domain\Entity\Webinar;
+use App\Modules\Webinar\Domain\Repository\WebinarReportRepositoryInterface;
+use App\Modules\Webinar\Domain\Entity\WebinarSubscriber;
 use PHPUnit\Framework\TestCase;
 
 class WebinarInteractorTest extends TestCase

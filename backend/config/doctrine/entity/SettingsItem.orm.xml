@@ -3,7 +3,7 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                           https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="App\Entity\SettingsItem" table="settings">
+    <entity name="App\Modules\Platform\Domain\Entity\SettingsItem" table="settings">
         <id name="key" type="string" length="32" column="id"/>
         <field name="value" type="string" nullable="true"/>
     </entity>

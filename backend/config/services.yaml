@@ -31,131 +31,131 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
-    App\Service\FileUploader:
+    App\Infrastructure\External\FileUploader:
         arguments:
             $targetDirectory: '%upload_directory%'
 
-    App\Domain\Backend\Interactor\DirectionInteractor:
+    App\Modules\Direction\Application\UseCase\Admin\DirectionInteractor:
         arguments:
             $targetDirectory: '%upload_directory%'
 
-    App\Backend\Form\ImageType:
+    App\Modules\Shared\Presentation\AdminHttp\Form\ImageType:
         arguments:
             $targetDirectory: '%upload_directory%'
 
-    App\Backend\Form\FileType:
+    App\Modules\Shared\Presentation\AdminHttp\Form\FileType:
         arguments:
             $targetDirectory: '%upload_directory%'
 
-    App\Domain\Backend\Interactor\FileUploader:
+    App\Infrastructure\Files\FileUploader:
         arguments:
             $targetDirectory: '%upload_directory%'
 
-    App\Domain\Entity\Article\Frontend\DTO\ArticleDtoAssembler:
+    App\Modules\Article\Application\UseCase\PublicSite\DTO\ArticleDtoAssembler:
         arguments:
             $fileUrlPrefix: '%upload_url%'
             $uploadDirectory: '%upload_directory%'
 
-    App\Domain\Entity\Module\Frontend\DTO\ModuleDtoAssembler:
+    App\Modules\LearningModule\Application\UseCase\PublicSite\DTO\ModuleDtoAssembler:
         arguments:
             $fileUrlPrefix: '%upload_url%'
 
-    App\Domain\Entity\ClinicalAnalysis\Frontend\DTO\ClinicalAnalysisDtoAssembler:
+    App\Modules\ClinicalAnalysis\Application\UseCase\PublicSite\DTO\ClinicalAnalysisDtoAssembler:
         arguments:
             $fileUrlPrefix: '%upload_url%'
 
-    App\Domain\Entity\News\Frontend\DTO\NewsDtoAssembler:
+    App\Modules\News\Application\UseCase\PublicSite\DTO\NewsDtoAssembler:
         arguments:
             $fileUrlPrefix: '%upload_url%'
 
-    App\Domain\Entity\PresidiumMember\Frontend\DTO\PresidiumMemberDtoAssembler:
+    App\Modules\Presidium\Application\UseCase\PublicSite\DTO\PresidiumMemberDtoAssembler:
         arguments:
             $fileUrlPrefix: '%upload_url%'
 
-    App\Domain\Entity\Document\Frontend\DTO\DocumentDtoAssembler:
+    App\Modules\Document\Application\UseCase\PublicSite\DTO\DocumentDtoAssembler:
         arguments:
             $fileUrlPrefix: '%upload_url%'
             $uploadDirectory: '%upload_directory%'
 
-    App\Domain\Entity\AdvertBanner\Frontend\DTO\AdvertBannerDtoAssembler:
+    App\Modules\AdvertBanner\Application\UseCase\PublicSite\DTO\AdvertBannerDtoAssembler:
         arguments:
             $fileUrlPrefix: '%upload_url%'
 
-    App\Domain\Entity\Banner\Frontend\DTO\BannerDtoAssembler:
+    App\Modules\Banner\Application\UseCase\PublicSite\DTO\BannerDtoAssembler:
         arguments:
             $fileUrlPrefix: '%upload_url%'
 
-    App\Service\YandexCounter:
+    App\Infrastructure\External\YandexCounter:
         arguments:
             $storagePath: '%storage_directory%'
             $id: '%env(YANDEX_ID)%'
             $token: '%env(YANDEX_TOKEN)%'
 
-    App\Domain\Entity\Customer\Frontend\DTO\CustomerProfileDtoAssembler:
+    App\Modules\Customer\Application\UseCase\PublicSite\DTO\CustomerProfileDtoAssembler:
         arguments:
             $fileUrlPrefix: '%upload_url%'
 
-    App\Webinar\DTO\WebinarReportFromWebinarDtoAssembler:
+    App\Modules\Webinar\Application\DTO\WebinarReportFromWebinarDtoAssembler:
         arguments:
             $fileUrlPrefix: '%upload_url%'
 
-    App\Backend\Controller\NewsController:
-        arguments:
-            $targetDirectory: '%upload_directory%'
-            $fileUrlPrefix: '%upload_url%'
-
-    App\Domain\Entity\Direction\DTO\DirectionDtoAssembler:
-        arguments:
-            $fileUrlPrefix: '%upload_url%'
-
-    App\Backend\Controller\SettingsController:
+    App\Modules\News\Presentation\AdminHttp\Controller\NewsController:
         arguments:
             $targetDirectory: '%upload_directory%'
             $fileUrlPrefix: '%upload_url%'
 
-    App\Domain\Entity\Conference\Frontend\DTO\ConferenceSeriesDtoAssembler:
+    App\Modules\Direction\Domain\Entity\DTO\DirectionDtoAssembler:
+        arguments:
+            $fileUrlPrefix: '%upload_url%'
+
+    App\Modules\Platform\Presentation\AdminHttp\Controller\SettingsController:
+        arguments:
+            $targetDirectory: '%upload_directory%'
+            $fileUrlPrefix: '%upload_url%'
+
+    App\Modules\Conference\Application\UseCase\PublicSite\DTO\ConferenceSeriesDtoAssembler:
         arguments:
             $fileUrlPrefix: '%upload_url%'
 
     Symfony\Bridge\Monolog\Processor\WebProcessor:
         tags: ['monolog.processor']
 
-    App\Domain\Interactor\UserInteractor:
+    App\Modules\Identity\Application\UseCase\UserInteractor:
         arguments:
             $logger: '@monolog.logger.confirmSend'
 
-    App\Service\Dadata\SuggestClient:
+    App\Infrastructure\External\SuggestClient:
         arguments:
             $token: '%env(DADATA_TOKEN)%'
 
-    App\Logger\GlobalsProcessor:
+    App\Infrastructure\Logging\GlobalsProcessor:
         tags:
             - { name: monolog.processor, handler: main }
 
-    App\Interfaces\Mailer:
+    App\Infrastructure\Legacy\Interfaces\Mailer:
         arguments:
             $mailer: '@swiftmailer.mailer.main_mailer'
             $fromAddress: '%env(MAILER_FROM_ADDRESS)%'
             $from: '%env(MAILER_FROM)%'
 
     app.webinar_reminder_mailer:
-        class: App\Interfaces\Mailer
+        class: App\Infrastructure\Legacy\Interfaces\Mailer
         arguments:
             $mailer: '@swiftmailer.mailer.webinar_mailer'
             $fromAddress: '%env(WEBINAR_MAILER_FROM_ADDRESS)%'
             $from: '%env(MAILER_FROM)%'
 
-    App\Webinar\Frontend\Interactor\WebinarReminderInteractor:
+    App\Modules\Webinar\Application\UseCase\PublicSite\Interactor\WebinarReminderInteractor:
         arguments:
             $logger: '@monolog.logger.webinarReminder'
             $mailer: '@app.webinar_reminder_mailer'
 
     app.webinar_interactor_with_webinar_mailer:
-        class: App\Webinar\Frontend\Interactor\WebinarInteractor
+        class: App\Modules\Webinar\Application\UseCase\PublicSite\Interactor\WebinarInteractor
         arguments:
             $mailer: '@app.webinar_reminder_mailer'
 
     app.webinar_controller_with_webinar_mailer:
-        class: App\Frontend\Controller\WebinarController
+        class: App\Modules\Webinar\Presentation\PublicHttp\Controller\WebinarController
         arguments:
             $interactor: '@app.webinar_interactor_with_webinar_mailer'

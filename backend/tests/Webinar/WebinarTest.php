@@ -3,7 +3,7 @@
 namespace App\Tests\Webinar;
 
 
-use App\Webinar\Webinar;
+use App\Modules\Webinar\Domain\Entity\Webinar;
 use PHPUnit\Framework\TestCase;
 
 class WebinarTest extends TestCase

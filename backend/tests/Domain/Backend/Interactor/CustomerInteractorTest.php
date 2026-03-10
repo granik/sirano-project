@@ -2,13 +2,13 @@
 
 namespace App\Domain\Backend\Interactor;
 
-use App\Domain\Entity\Customer\Backend\CustomerRepositoryInterface;
-use App\Domain\Frontend\Interactor\FilterDirectionInterface;
-use App\Domain\Interactor\SettingsInterface;
-use App\Domain\Interactor\User\UserRepositoryInterface;
-use App\Domain\Interactor\UserInteractor;
-use App\Interactors\MailerInterface;
-use App\Interactors\UserPasswordEncoderInterface;
+use App\Modules\Customer\Domain\Repository\Admin\CustomerRepositoryInterface;
+use App\Modules\Direction\Application\UseCase\PublicSite\FilterDirectionInterface;
+use App\Shared\Application\SettingsInterface;
+use App\Modules\Identity\Domain\UserRepositoryInterface;
+use App\Modules\Identity\Application\UseCase\UserInteractor;
+use App\Shared\Application\Port\MailerInterface;
+use App\Shared\Application\Port\UserPasswordEncoderInterface;
 use App\Tests\Builders\CustomerBuilder;
 use PHPUnit\Framework\TestCase;
 use Psr\Log\LoggerInterface;

@@ -3,19 +3,19 @@
                   xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
                           https://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
 
-    <entity name="App\Domain\Entity\ClinicalAnalysis\ClinicalAnalysis" table="clinical_analyzes">
+    <entity name="App\Modules\ClinicalAnalysis\Domain\Entity\ClinicalAnalysis" table="clinical_analyzes">
         <id name="id" type="integer">
             <generator strategy="AUTO" />
         </id>
 
         <field name="name" type="string" />
-        <many-to-one field="direction" target-entity="App\Domain\Entity\Direction\Direction">
+        <many-to-one field="direction" target-entity="App\Modules\Direction\Domain\Entity\Direction">
             <join-column name="direction_id" referenced-column-name="id" />
         </many-to-one>
-        <many-to-one field="category" target-entity="App\Domain\Entity\Direction\Category">
+        <many-to-one field="category" target-entity="App\Modules\Direction\Domain\Entity\Category">
             <join-column name="category_id" referenced-column-name="id" nullable="true"/>
         </many-to-one>
-        <one-to-one field="module" target-entity="App\Domain\Entity\Module\Module" />
+        <one-to-one field="module" target-entity="App\Modules\LearningModule\Domain\Entity\Module" />
         <field name="number" type="integer" />
         <field name="isActive" type="boolean" />
         <field name="companyEmail" type="string" nullable="true" />
